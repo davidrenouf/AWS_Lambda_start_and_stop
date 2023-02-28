@@ -14,7 +14,8 @@ class InstanceManagement:
         try:
             for reservation in self.client.describe_instances(Filters=self.filter)['Reservations']:
                 for instance in reservation['Instances']:
-                    self.instance_ids.append(instance['InstanceId'])
+                    if(instance['State']['Name'] == 'running' or instance['State']['Name'] == 'stopped'):
+                        self.instance_ids.append(instance['InstanceId'])
             print("Considering instance(s) %s", self.instance_ids)
             return self.instance_ids
         except ClientError as err:

@@ -4,7 +4,7 @@ from rds_management import RdsManagement
 from autoscaling_management import AutoscalingManagement
 
 def lambda_handler(event, context):
-    filter_admin_instances = [{'Name': 'tag:Name', 'Values': ['lambda_environement_manager']}]
+    filter_admin_instances = [{'Name': 'tag:Name', 'Values': ['test-lambda']}]
     admin_instances = InstanceManagement(boto3.client('ec2'), filter_admin_instances)
     admin_instances.start()
 

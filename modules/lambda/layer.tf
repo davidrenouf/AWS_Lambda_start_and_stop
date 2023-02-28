@@ -1,5 +1,5 @@
 locals {
-  layer_name = "${var.env}_${var.layer_name}"
+  layer_name = "${var.layer_name}"
   layer_path = "${path.module}/layer/start_and_stop"
 }
 

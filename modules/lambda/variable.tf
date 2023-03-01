@@ -3,15 +3,9 @@ variable "env" {
   default = "alpha"
 }
 
-variable "lambda_name" {
+variable "lambda_prefix_name" {
   type    = string
   default = "lambda"
-
-}
-
-variable "lambda_path" {
-  type    = string
-  default = "/"
 
 }
 
@@ -56,8 +50,32 @@ variable "compatible_runtimes" {
 
 }
 
-variable "schedule_expression" {
+variable "schedule_expression_start" {
+  type     = string
+  default  = "cron(0 1 ? * MON-FRI *)"
+
+}
+
+variable "schedule_expression_stop" {
+  type     = string
+  default  = "cron(0 0 ? * MON-FRI *)"
+
+}
+
+variable "instanceName" {
   type    = string
-  default = "cron(0 0 ? * MON-FRI *)"
+  default = "null"
+
+}
+
+variable "asgName" {
+  type    = string
+  default = "null"
+
+}
+
+variable "dbClusterId" {
+  type    = string
+  default = "null"
 
 }

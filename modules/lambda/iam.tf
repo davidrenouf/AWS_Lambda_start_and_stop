@@ -3,7 +3,7 @@
 ############################
 
 resource "aws_iam_role" "role" {
-  name               = "${var.lambda_name}-role"
+  name               = "${var.lambda_prefix_name}_role"
   path               = "/"
   assume_role_policy = <<EOF
 {

@@ -67,13 +67,3 @@ class AutoscalingManagement:
                 "Couldn't display your asg. Here's why: %s: %s",
                 err.response['Error']['Code'], err.response['Error']['Message'])
             raise
-
-def display(self):
-        try:
-            self.name = self.client.describe_auto_scaling_groups(Filters=self.filter)['AutoScalingGroups'][0]['AutoScalingGroupName']
-            print("Considering autoscaling group %s", self.name)
-        except ClientError as err:
-            logger.error(
-                "Couldn't display your asg. Here's why: %s: %s",
-                err.response['Error']['Code'], err.response['Error']['Message'])
-            raise

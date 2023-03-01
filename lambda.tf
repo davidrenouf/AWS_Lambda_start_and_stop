@@ -1,23 +1,12 @@
-module "lambda_stop" {
+module "lambda_sands" {
   source = "./modules/lambda"
 
-  env                 = "stop"
-  lambda_name         = "stop_environement"
-  lambda_path         = "./lambda"
-  lambda_description  = "Stop"
-  lambda_filename     = "stop_environement"
-  runtime             = "python3.9"
-  compatible_runtimes = ["python3.9"]
-}
-
-module "lambda_start" {
-  source = "./modules/lambda"
-
-  env                 = "start"
-  lambda_name         = "start_environement"
-  lambda_path         = "./lambda"
-  lambda_description  = "Start"
-  lambda_filename     = "start_environement"
-  runtime             = "python3.9"
-  compatible_runtimes = ["python3.9"]
+  env                       = "dev"
+  lambda_prefix_name        = "lambda_sands"
+  lambda_description        = "SandS"
+  schedule_expression_start = "cron(0 21 ? * MON-FRI *)"
+  schedule_expression_stop  = "cron(0 8 ? * MON-FRI *)"
+  #instanceName              = "lambda-test,toto"
+  #asgName                   = "test-lambda,test-lambda-2"
+  #dbClusterId               = "database-1,database-2"
 }

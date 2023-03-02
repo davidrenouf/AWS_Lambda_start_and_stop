@@ -62,7 +62,7 @@ It is possible to manage all resources together using each required arguments.
 
 ![](img/all.png)
 
-If you want to manage resources at different moments it is necessary to create other lambda using this modules.
+If you want to manage resources at different moments it is necessary to create other lambda using that module.
 
 ![](img/mix.png)
 

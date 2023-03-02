@@ -14,7 +14,7 @@ In each cases the lambda configuration start with the following which create a l
 
 ![](img/empty.png)
 
-To apply configuration use your CI/CD mecanism or just command `terraform apply`.
+To apply configuration use your CI/CD mecanism or just command `terraform init` and `terraform apply`.
 ## Manage Instances
 
 To manage instance the required argument is `instanceName` followed by a string with all the instance names whitout spaces that you want to manage. 

@@ -6,9 +6,9 @@ This repository aims to provide lambda patterns and their triggers to manage the
 
 First it is necessary to clone the project to use the `modules` folder.
 
-The `.tf` files provide configuration examples but must be merge/remove according to th current infrastructure.
+The `.tf` files provide configuration examples but must be merge/remove according to current infrastructure.
 
-The follow the next examples to quickly configure lambda according to your needs.
+Then follow the next examples to quickly configure lambda according to your needs.
 
 In each cases the lambda configuration start with the following which create a lambda doing nothing.
 

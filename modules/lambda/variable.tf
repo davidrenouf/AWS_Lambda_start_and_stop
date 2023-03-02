@@ -1,17 +1,11 @@
 variable "env" {
   type    = string
-  default = "alpha"
+  default = "env"
 }
 
 variable "lambda_prefix_name" {
   type    = string
-  default = "lambda"
-
-}
-
-variable "lambda_filename" {
-  type    = string
-  default = "lambda"
+  default = "prefix"
 
 }
 
